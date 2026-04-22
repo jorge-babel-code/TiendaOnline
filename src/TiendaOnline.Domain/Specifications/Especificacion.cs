@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 namespace TiendaOnline.Domain.Specifications
 {
     /// <summary>
-    /// Clase base abstracta para implementar especificaciones con soporte de combinación lógica.
+    /// Clase base abstracta para implementar especificaciones con soporte de combinación lógica..
     /// </summary>
     /// <typeparam name="T">Tipo de entidad sobre la que aplica la especificación.</typeparam>
     public abstract class Especificacion<T> : IEspecificacion<T>
