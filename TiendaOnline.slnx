@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TiendaOnline.Application/TiendaOnline.Application.csproj" />
+    <Project Path="src/TiendaOnline.Contracts/TiendaOnline.Contracts.csproj" />
+    <Project Path="src/TiendaOnline.Domain/TiendaOnline.Domain.csproj" />
+    <Project Path="src/TiendaOnline.Infrastructure/TiendaOnline.Infrastructure.csproj" />
+    <Project Path="src/TiendaOnline.Presentation/TiendaOnline.Presentation.csproj" />
+    <Project Path="src/TiendaOnline.SharedKernel/TiendaOnline.SharedKernel.csproj" />
+  </Folder>
+</Solution>

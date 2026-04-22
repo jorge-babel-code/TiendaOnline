@@ -1,0 +1,11 @@
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\bin\Debug\net10.0\TiendaOnline.SharedKernel.deps.json
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\bin\Debug\net10.0\TiendaOnline.SharedKernel.dll
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\bin\Debug\net10.0\TiendaOnline.SharedKernel.pdb
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\obj\Debug\net10.0\TiendaOnline.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\obj\Debug\net10.0\TiendaOnline.SharedKernel.AssemblyInfoInputs.cache
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\obj\Debug\net10.0\TiendaOnline.SharedKernel.AssemblyInfo.cs
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\obj\Debug\net10.0\TiendaOnline.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\obj\Debug\net10.0\TiendaOnline.SharedKernel.dll
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\obj\Debug\net10.0\refint\TiendaOnline.SharedKernel.dll
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\obj\Debug\net10.0\TiendaOnline.SharedKernel.pdb
+C:\Proyectos\TiendaOnline\src\TiendaOnline.SharedKernel\obj\Debug\net10.0\ref\TiendaOnline.SharedKernel.dll
