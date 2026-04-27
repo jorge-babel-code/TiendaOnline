@@ -9,8 +9,16 @@ namespace TiendaOnline.Infrastructure.Repositories
     /// <summary>
     /// Implementación del repositorio de pedidos.
     /// </summary>
-    public class PedidoRepository : RepositorioGenerico<Pedido>, IRepositorioPedido
-    {
+        public class PedidoRepository : RepositorioGenerico<Pedido>, IRepositorioPedido
+        {
+            /// <inheritdoc />
+            public async Task<Pedido?> ObtenerUltimoPedidoDelClienteAsync(int clienteId)
+            {
+                return await _conjunto
+                    .Where(p => p.ClienteId == clienteId)
+                    .OrderByDescending(p => p.FechaCreacion)
+                    .FirstOrDefaultAsync();
+            }
         /// <summary>
         /// Inicializa una nueva instancia del repositorio de pedidos.
         /// </summary>

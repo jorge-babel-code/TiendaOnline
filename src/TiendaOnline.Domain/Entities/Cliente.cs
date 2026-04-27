@@ -9,6 +9,10 @@ namespace TiendaOnline.Domain.Entities
     public class Cliente
     {
         /// <summary>
+        /// Indica si el cliente es VIP.
+        /// </summary>
+        public bool EsVip { get; private set; }
+        /// <summary>
         /// Identificador único del cliente.
         /// </summary>
         public int Id { get; private set; }
@@ -33,6 +37,15 @@ namespace TiendaOnline.Domain.Entities
             Nombre = nombre;
             Email = email;
             Direccion = direccion;
+            EsVip = false;
+        }
+
+        private Cliente(string nombre, Email email, Direccion? direccion, bool esVip)
+        {
+            Nombre = nombre;
+            Email = email;
+            Direccion = direccion;
+            EsVip = esVip;
         }
 
         /// <summary>
@@ -53,6 +66,27 @@ namespace TiendaOnline.Domain.Entities
                 return (null, validation);
 
             return (new Cliente(nombre, email, direccion), validation);
+        }
+
+        /// <summary>
+        /// Crea una nueva instancia de cliente con validación y estado VIP.
+        /// </summary>
+        /// <param name="nombre">Nombre del cliente.</param>
+        /// <param name="email">Correo electrónico del cliente.</param>
+        /// <param name="direccion">Dirección opcional del cliente.</param>
+        /// <param name="esVip">Indica si el cliente es VIP.</param>
+        /// <returns>Tupla con el cliente creado y el resultado de validación.</returns>
+        public static (Cliente? Cliente, ValidationResult Validation) Create(string nombre, Email email, Direccion? direccion, bool esVip)
+        {
+            var validation = new ValidationResult();
+
+            if (string.IsNullOrWhiteSpace(nombre))
+                validation.AddError("Nombre", "El nombre no puede estar vacío.");
+
+            if (!validation.IsValid)
+                return (null, validation);
+
+            return (new Cliente(nombre, email, direccion, esVip), validation);
         }
 
         /// <summary>

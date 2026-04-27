@@ -12,4 +12,11 @@ public interface IRepositorioPedido : IRepositorioGenerico<Pedido>
     /// <param name="especificacion">Especificación de filtrado.</param>
     /// <returns>Lista de pedidos con líneas incluidas.</returns>
     Task<List<Pedido>> ObtenerConLineasPorEspecificacionAsync(IEspecificacion<Pedido> especificacion);
+
+    /// <summary>
+    /// Obtiene el último pedido creado por un cliente.
+    /// </summary>
+    /// <param name="clienteId">ID del cliente.</param>
+    /// <returns>El último pedido del cliente o null si no existe.</returns>
+    Task<Pedido?> ObtenerUltimoPedidoDelClienteAsync(int clienteId);
 }

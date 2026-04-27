@@ -3,6 +3,7 @@ using TiendaOnline.Application.Interfaces;
 using TiendaOnline.Application.Queries;
 using TiendaOnline.Application.Services;
 using TiendaOnline.Contracts;
+using TiendaOnline.Domain.Services;
 
 namespace TiendaOnline.Application;
 
@@ -21,6 +22,15 @@ public static class DependencyInjection
         services.AddScoped<PedidoApplicationService>();
         services.AddScoped<IProductoApplicationService, ProductoApplicationService>();
         services.AddScoped<IQueryHandler<BuscarPedidosQuery, IReadOnlyList<PedidoResumenDTO>>, BuscarPedidosQueryHandler>();
+        
+        // Servicios de Dominio
+        services.AddScoped<IServicioPedidoCompra, ServicioPedidoCompra>();
+        
+        // Servicios de Aplicación
+        services.AddScoped<ICrearPedidoApplicationService, CrearPedidoApplicationService>();
+
+        // Unit of Work
+        services.AddScoped<TiendaOnline.Domain.Repositories.IUnitOfWork>(sp => sp.GetRequiredService<TiendaOnline.Domain.Repositories.IUnitOfWork>());
 
         return services;
     }

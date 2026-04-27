@@ -27,6 +27,9 @@ public static class DependencyInjection
         services.AddScoped<IProductoRepository, ProductoRepository>();
         services.AddScoped<IReadOnlyStore, ReadOnlyStore>();
 
+        // Unit of Work
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+
         return services;
     }
 }
